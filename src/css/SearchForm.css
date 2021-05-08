@@ -1,0 +1,77 @@
+.search-form {
+
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+.enter-city-name {
+
+    height: 25px;
+    border: 1px solid black;
+
+}
+
+.search-button {
+
+    height: 30px;
+    margin-left: 15px;
+    background: #36839c;
+    color: aliceblue;
+    border: none;
+
+}
+
+/* 
+  if screen width is between 640px and 740px then following css will be applied
+*/
+
+@media (min-width: 640px) and (max-width: 740px) {
+
+    .search-form {
+
+        margin-top: -15px;
+        margin-left: -25px;
+
+    }
+
+    .enter-city-name {
+
+        width: 250px;
+        height: 28px; 
+
+    }
+
+    .search-button {
+
+        height: 32px;
+        width: 75px;
+        font-size: 12px;
+
+    }
+}
+
+/* 
+  if screen width is greater than 645px then following css will be applied
+*/
+
+@media (min-width: 645px) {
+
+    .enter-city-name {
+
+        width: 250px;
+        height: 28px;
+
+    }
+
+    .search-button {
+
+        height: 32px;
+        width: 75px;
+        font-size: 16px;
+        
+    }
+}
