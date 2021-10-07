@@ -1,187 +1,59 @@
-/*
-  mobile first approach is used  
-*/
-
-.weather-details {
-
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    color: #393e46;
-    font-family: Arial, Helvetica, sans-serif;
-
+.searching,
+.city-not-found {
+  margin: auto;
+  margin-top: 18px;
+  width: 600px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 1px 1px 25px rgb(136, 151, 151);
 }
 
-.top-section {
+.weather-details {
+  font-family: sans-serif;
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+}
 
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 55px;
-
+.weather-details__box-1,
+.weather-details__box-2 {
+  height: 500px;
+  width: 500px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 25px rgb(136, 151, 151);
 }
 
 .city-name {
-
-    position: relative;
-    top: 50px;
-
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  top: 115px;
 }
 
 .city-temp {
-
-    font-size: 45px;
-    position: relative;
-    left: 12px;
-
+  font-size: 75px;
+  position: relative;
+  top: 115px;
+  left: 95px;
 }
 
-.city-weather-description {
-
-    position: relative;
-    top: -50px;
-
+.weather-icon {
+  height: 75px;
+  width: 75px;
+  position: relative;
+  left: 385px;
+  top: -20px;
 }
 
-img {
-    
-    height: 65px;
-    width: 65px;
-    position: relative;
-    left: 275px;
-    top: -135px;
-
+.container {
+  margin: 50px 35px;
 }
 
-.bottom-section {
-
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -65px;
-
-}
-
-.bottom-section-1 {
-
-    display: flex;
-    height: 100px;
-    flex-direction: row;
-
-}
-
-.bottom-section-1 > div {
-
-    height: 100px;
-    width: 105px;
-    margin: 1px;
-    text-align: center;
-    
-}
-
-.bottom-section-1 > div > h4 {
-
-    position: relative;
-    top: 20px;
-
-}
-
-.bottom-section-2 {
-
-    display: flex;
-    height: 100px;
-    flex-direction: row;
-
-}
-
-.bottom-section-2 > div {
-
-    height: 100px;
-    width: 105px;
-    margin: 1px;
-    text-align: center;
-
-}
-
-.bottom-section-2 > div > h4{
-
-    position: relative;
-    top: -40px;
-
-}
-
-/* 
-  if screen width is between 640px and 740px then following css will be applied
-*/
-
-@media (min-width: 640px) and (max-width: 740px) {
-
-    .weather-details {
-
-        margin-top: -85px;
-
-    }
-
-    img {
-
-        position: relative;
-        left: 435px; 
-
-    }
-
-    .bottom-section {
-
-        margin-top: -25px;
-        margin-left: 125px;
-
-    }
-
-}
-
-/* 
-  if screen width is between 745px and 1000px then following css will be applied
-  this is for the desktop version of the application
-*/
-
-@media (min-width: 745px) and (max-width: 1000px) {
-
-    img {
-
-        position: relative;
-        left: 575px;
-
-    }
-
-    .bottom-section {
-
-        margin-top: -25px;
-        margin-left: 285px;
-
-    }
-
-}
-
-/* 
-  if screen width is greater than 1000px then following css will be applied
-  this is for the desktop version of the application
-*/
-
-@media (min-width: 1000px) {
-
-    img {
-
-        position: relative;
-        left: 750px;
-
-    }
-
-    .bottom-section {
-
-        margin-top: -25px;
-        margin-left: 475px;
-        
-    }
-
+.container h3 {
+  font-size: 20px;
+  margin: 10px;
 }

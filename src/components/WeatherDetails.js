@@ -1,49 +1,49 @@
 import React from 'react'
 import '../css/WeatherDetails.css'
 
-function WeatherDetails(props){
-
-    if(props.cityName)
-    {
-        return(
-            <div className="weather-details">
-
-                <section className="top-section">
-                    <div className="city-name"> <h1> {props.cityName} </h1> </div>
-                    <div className="city-temp"> <h1> {Math.round(props.temp) + '\u00B0' } </h1></div>
-                    <div className="city-weather-description"> <h1> {props.description} </h1></div>
-                </section>
-
-                <img src={props.weatherIcon} alt="weather icon"/>
-
-                <section className="bottom-section">
-
-                    <div className="bottom-section-1">
-                        <div><h4>Max / Min</h4></div>
-                        <div><h4>Pressure</h4></div>
-                        <div><h4>Humidity</h4></div>
-                        <div><h4>Wind</h4></div>
-                    </div>
-
-                    <div className="bottom-section-2">
-                        <div><h4> {Math.round(props.max) +'\u00B0'} / {Math.round(props.min) +'\u00B0'} </h4></div>
-                        <div><h4> {props.pressure} Bar </h4></div>
-                        <div><h4> {props.humidity} % </h4></div>
-                        <div><h4> {props.windspeed} km/h</h4></div>
-                    </div>
-
-                </section>
-
-            </div>
+function WeatherDetails(props) {
+    if (props.searching) {
+        return (
+            <h3 className="searching">Searching City Name...</h3>
         )
     }
-    else
-    {
-        return(
-            <div></div>
+    if (props.cityNotFound) {
+        return (
+            <h3 className="city-not-found">City Name Not Found</h3>
         )
-    }  
-
+    }
+    else if (props.cityName) {
+        return (
+            <>
+                <div className="weather-details">
+                    <div className="weather-details__box-1">
+                        <h1 className="city-name">{props.cityName}</h1>
+                        <h1 className="city-temp">{props.temp.toFixed(2) + '\u00B0'} C</h1>
+                        <img className="weather-icon" src={props.weatherIcon} alt="weather icon" />
+                    </div>
+                    <div className="weather-details__box-2">
+                        <div className="container">
+                            <h3>Weather : {props.description}</h3>
+                            <h3>Wind : {props.windspeed} km/h</h3>
+                        </div>
+                        <div className="container">
+                            <h3>Humidity : {props.humidity} %</h3>
+                            <h3>Pressure : {props.pressure} Pa</h3>
+                        </div>
+                        <div className="container">
+                            <h3>Max Temp : {props.temp.toFixed(2) + '\u00B0'} C</h3>
+                            <h3>Min Temp : {props.temp.toFixed(2) + '\u00B0'} C</h3>
+                        </div>
+                        <div className="container">
+                            <h3>Sunrise : {new Date(props.sunrise * 1000).toLocaleTimeString()}</h3>
+                            <h3>Sunset : {new Date(props.sunset * 1000).toLocaleTimeString()}</h3>
+                        </div>
+                    </div>
+                </div>
+            </>
+        )
+    }
+    return null;
 }
 
 export default WeatherDetails

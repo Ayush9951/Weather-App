@@ -1,0 +1,9 @@
+.weather-app-heading {
+  text-align: center;
+  font-size: 45px;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(24, 175, 212);
+  padding: 35px;
+  margin: auto;
+}
